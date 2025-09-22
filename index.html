@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        *{
+            font-family: "Helvetica", "Arial", sans-serif;
+        }
+        body {
+            background-image: url(back.jpg);
+        }
+
+        .navbar {
+            padding: 24px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 10px;
+
+
+        }
+
+        .navbar button {
+            font-weight: bold;
+            font-size: 15px;
+            width: 102px;
+            padding: 9px;
+            text-align: center;
+            background-color: rgb(255 251 251 / 84%);
+            color: black;
+            border-radius: 7px;
+            border: none;
+        }
+
+        .navbar button:hover {
+            background-color: burlywood;
+        }
+
+        .logo img {
+            height: 60px;
+            width: 150px;
+        }
+
+        .logo img:hover {
+            transform: scale(1.05);
+            transition: all 0.5s ease;
+        }
+
+        h1 {
+            font-size: 45px;
+            text-align: center;
+        }
+
+        .billing-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 40px;
+
+        }
+
+        .billing-button {
+            padding: 8px 20px;
+            border-radius: 9999px;
+            border: 1px solid green;
+            font-size: 15px;
+            cursor: pointer;
+            font-weight: bold;
+            margin: 0 5px;
+            background-color: rgb(105, 184, 105);
+            color: white;
+        }
+
+        .billing-button:hover {
+            background-color: burlywood;
+        }
+
+        .whole-cards {
+            margin: 0px auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+            background-color: white;
+            border-radius: 20px;
+            padding: 5px;
+            height: 572px;
+            width: 80%;
+        }
+        
+
+        .top-cards {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+        }
+
+        .card {
+            padding: 15px;
+            border: none;
+            border-bottom: 0.5px solid #80808045;
+
+        }
+
+        span p {
+            font-weight: bold;
+            text-align: center;
+            color: rgb(80, 76, 76);
+        }
+
+        .card p {
+            text-align: center;
+            margin-bottom: 5px;
+            margin-top: 17px;
+            font-size: 35px;
+        }
+
+        .card p sub {
+            color: rgb(116, 111, 111);
+            font-size: 20px;
+        }
+
+        .card span {
+            color: rgb(116, 111, 111);
+        }
+
+        .card span p {
+            text-align: center;
+            font-size: 15px;
+        }
+
+        .card button {
+            width: 116px;
+            padding: 11px;
+            border: 1px solid green;
+            background: rgb(105, 184, 105);
+            border-radius: 11px;
+            margin-left: 52px;
+            height: 35px;
+        }
+
+        .card button:hover {
+            background-color: burlywood;
+        }
+
+        .card h2 {
+            font-weight: bold;
+            font-size: 25px;
+            text-align: center;
+        }
+
+        .card article {
+            width: 102px;
+            border-radius: 0px 0px 7px 7px;
+            color: white;
+            text-align: center;
+            border: 1px solid black;
+            background-color: rgb(23, 23, 51);
+            font-size: 13px;
+            margin-left: 53px;
+        }
+
+        .plan article {
+            margin-bottom: 1px;
+            margin-top: -15px;
+        }
+
+        .dropdown {
+            margin-top: 17px;
+            margin-right: 600px;
+        }
+
+        .dropdown select {
+            font-size: 17px;
+            margin-right: 11px;
+            border: none;
+            background: none;
+
+        }
+
+        .blue-card img {
+            width: 240px;
+            height: 220px;
+            margin-top: 39px;
+            margin-left: 10px;
+            border-radius: 18px;
+
+        }
+
+        .blue-card img:hover {
+            transform: scale(1.05);
+            transition: all 0.5s ease;
+        }
+
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 900px;
+            margin-left: 70px;
+            background-color: white;
+            border-radius: 10px;
+
+            overflow: hidden;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 12px 15px;
+            font-weight: bold;
+        }
+
+
+        .tr {
+            background-color: #dfd8d852;
+        }
+
+
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .check {
+            color: #28a745;
+
+            font-weight: bold;
+        }
+
+        .cross {
+            color: #dc3545;
+
+            font-weight: bold;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="whole">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"> <img src="logo.png"></a>
+            </div>
+            <div class="dropdown">
+                <select>
+                    <option>
+                        Products
+                    </option>
+                </select>
+
+
+                <select>
+                    <option>
+                        Developer
+                    </option>
+                </select>
+
+
+                <select>
+                    <option>
+                        Pricing
+                    </option>
+                </select>
+            </div>
+            <div class="button">
+                <button>Download</button>
+            </div>
+
+        </div>
+        <div class="topic">
+            <h1>
+                Get Interactive and Responsive<br> Charts For All Your Projects
+            </h1>
+            <span>
+                <p>Extensive documentation, consistence API, and a range of customization options - we have all you
+                    need!
+                </p>
+            </span>
+        </div>
+        <div class="billing-container">
+            <div class="btn1"><button class="billing-button active"><a href="index.html"
+                        style="text-decoration: none;">Bill
+                        Monthly</a></button></div>
+            <div class="btn2"><button class="billing-button"><a href="year.html" style="text-decoration: none;">
+                        Bill Annually
+                        <span class="save-text">save 28%</span></a>
+                </button>
+            </div>
+        </div>
+        <div class="whole-cards">
+            <div class="top-cards">
+                <div class="blue-card">
+                    <img src="card.png">
+                </div>
+
+                <div class="card">
+                    <h2>Basic</h2>
+                    <p>$45<sub>/Mo</sub></p>
+                    <span>
+                        <p>Perfect for a small internal app<br>or dashboard</p>
+                    </span><br>
+                    <button>Choose</button>
+                </div>
+
+                <div class="card">
+                    <div class="plan">
+                        <article>Popular plan</article>
+                    </div>
+                    <h2>Pro</h2>
+                    <p>$80<sub>/Mo</sub></p>
+                    <span>
+                        <p>Perfect for SaaS apps with<br>small teams</p>
+                    </span><br>
+                    <button>Choose </button>
+                </div>
+
+                <div class="card">
+                    <h2>Enterprise</h2>
+                    <p>$105<sub>/Mo</sub></p>
+                    <span>
+                        <p>Perfect for SaaS apps with <br>large teams & require on-prem</p>
+                    </span><br>
+                    <button>Choose</button>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <tr class="tr">
+                        <th>Developer</th>
+                        <th class="center">Up to 1</th>
+                        <th class="center">Up to 10</th>
+                        <th class="center">Up to 10</th>
+                    </tr>
+                    <tr>
+                        <td>Number of products</td>
+                        <td class="center check">✔</td>
+                        <td class="center check">✔</td>
+                        <td class="center check">✔</td>
+                    </tr>
+                    <tr class="tr">
+                        <td>Internal Apps</td>
+                        <td class="center cross">✖</td>
+                        <td class="center check">✔</td>
+                        <td class="center check">✔</td>
+                    </tr>
+                    <tr>
+                        <td>Saas Apps</td>
+                        <td class="center cross">✖</td>
+                        <td class="center cross">✖</td>
+                        <td class="center check">✔</td>
+                    </tr>
+                    <tr class="tr">
+                        <td>Software Update</td>
+                        <td class="center">Always Latest Version</td>
+                        <td class="center">Always Latest Version</td>
+                        <td class="center">Always Latest Version</td>
+                    </tr>
+                    <tr>
+                        <td>Technical Support</td>
+                        <td class="center">Community</td>
+                        <td class="center">Professional</td>
+                        <td class="center">Professional</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
